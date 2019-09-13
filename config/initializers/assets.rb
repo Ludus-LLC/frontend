@@ -22,6 +22,7 @@ Rails.application.config.assets.precompile += %w( jquery.waypoints.min.js )
 Rails.application.config.assets.precompile += %w( jquery.magnific-popup.min.js )
 Rails.application.config.assets.precompile += %w( mobile-detect.min.js )
 Rails.application.config.assets.precompile += %w( main.js )
+Rails.application.config.assets.precompile += %w( flickr.js )
 
 
 Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "stylesheets")
