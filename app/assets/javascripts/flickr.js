@@ -1,5 +1,5 @@
 // Flickr API key
-const apiKey = '';
+const apiKey = gon.api_key
 
 // Flickr画像データのURLを返す
 const getFlickrImageURL = (photo, size) => {
