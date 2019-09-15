@@ -238,7 +238,7 @@ const parameters = $.param({
   api_key: apiKey,
   text: 'cat', // 検索テキスト
   sort: 'interestingness-desc', // 興味深さ順
-  per_page: 8, // 取得件数
+  per_page: 12, // 取得件数
   license: '4', // Creative Commons Attributionのみ
   extras: 'owner_name,license', // 追加で取得する情報
   format: 'json', // レスポンスをJSON形式に
@@ -257,7 +257,7 @@ $.getJSON(url, (data) => {
     return;
   }
 
-  // // ヒット件数
+  // ヒット件数
   // $div.append(`<div>${data.photos.total} photos in total</div>`);
 
   for (let i = 0; i < data.photos.photo.length; i++) {
@@ -283,10 +283,9 @@ $.getJSON(url, (data) => {
         }),
       ),
     );
-      $div.appendTo('.image-gallery');
-  };
+    // $divを#mainに追加する
+    $div.appendTo('.image-gallery');
+  }
   // BootstrapのTooltipを適用
   $('[data-toggle="tooltip"]').tooltip();
-
-
 });
